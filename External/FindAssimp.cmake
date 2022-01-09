@@ -25,8 +25,7 @@ SET(ASSIMP_CMAKE_ARGS
 )
 
 ExternalProject_Add(ext_Assimp
-  URL https://github.com/assimp/assimp/archive/v4.1.0.zip
-  URL_MD5 e98a03f9496ff761e67f29b645e04316
+  URL https://github.com/assimp/assimp/archive/v5.1.3.zip
   CMAKE_ARGS ${ASSIMP_CMAKE_ARGS}
 )
 
@@ -52,7 +51,7 @@ IF (MSVC)
 	endif ()
 
   SET(ASSIMP_LIBRARY ${install_dir}/lib/assimp-${ASSIMP_MSVC_VERSION}-mt.lib)
-  SET(IRRXML_LIBRARY ${install_dir}/lib/IrrXML.lib)
+  #SET(IRRXML_LIBRARY ${install_dir}/lib/IrrXML.lib)
   # SET(ZLIB_LIBRARY ${install_dir}/lib/zlibstatic${ASSIMP_BUILD_SUFFIX}.lib)
 	# WARNING: this is a hack! Probably an issue with Assimp.
   SET(ZLIB_LIBRARY ${install_dir}/lib/zlibstaticd.lib)
@@ -61,7 +60,7 @@ ELSE (MSVC)
 
 	# Linux / MacOS
   SET(ASSIMP_LIBRARY ${install_dir}/lib/libassimp.a)
-  SET(IRRXML_LIBRARY ${install_dir}/lib/libIrrXML.a)
+  #SET(IRRXML_LIBRARY ${install_dir}/lib/libIrrXML.a)
   SET(ZLIB_LIBRARY ${install_dir}/lib/libzlibstatic.a)
 
 ENDIF (MSVC)

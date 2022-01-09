@@ -9,6 +9,7 @@ set(${PROJECT_NAME}_PATCH_LEVEL 0)
 
 # Enable C++11 support.
 set(CMAKE_CXX_STANDARD 11)
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 if (POLICY CMP0058)
     cmake_policy(SET CMP0058 NEW)
 endif ()
